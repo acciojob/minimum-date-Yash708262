@@ -1,5 +1,15 @@
 function minDate(dates) {
-  //write you code here
+    if (!dates.length) return null; // अगर array खाली है तो null return करें
+
+    let min = dates[0]; // पहले element को सबसे छोटा मान लेते हैं
+
+    for (let i = 1; i < dates.length; i++) { // Loop से बाकी elements को check करेंगे
+        if (dates[i] < min) { 
+            min = dates[i]; // अगर नया element छोटा है तो min को update कर दो
+        }
+    }
+
+    return min; // सबसे छोटी तारीख return करें
 }
 
 // Do not change the code
